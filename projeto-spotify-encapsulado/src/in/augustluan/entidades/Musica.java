@@ -80,4 +80,13 @@ public class Musica {
 		this.vezesReproduzido = vezesReproduzido;
 	}
 
+	@Override
+	public String toString() {
+		return "Musica [nome=" + nome + ", artista=" + artista + ", letra=" + letra + ", genero=" + genero
+				+ ", anoLancamento=" + anoLancamento + ", duracao=" + duracao + ", vezesReproduzido=" + vezesReproduzido
+				+ "]";
+	}
+	
+	
+
 }

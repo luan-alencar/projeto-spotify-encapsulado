@@ -3,7 +3,7 @@ package in.augustluan.entidades;
 public class Playlist {
 
 	private Musica[] musicas;
-	private int qtdMusica;
+	private int qtdMusica; // vc pode descobrir quantas tem chamando qtdMusica na saida no metodo main
 
 	public Playlist() {
 		musicas = new Musica[10];
@@ -36,8 +36,6 @@ public class Playlist {
 		Musica m7 = new Musica("asdf", "sdfa", "scvv", null, 2020, 45.04, 2);
 		Musica m8 = new Musica("asdf", "sdfa", "scvv", null, 2020, 45.04, 2);
 		Musica m9 = new Musica("asdf", "sdfa", "scvv", null, 2020, 45.04, 2);
-		Musica m10 = new Musica("asdf", "sdfa", "scvv", null, 2020, 45.04, 2);
-		Musica m11 = new Musica("asdf", "sdfa", "scvv", null, 2020, 45.04, 2);
 		p.add(m);
 		p.add(m2);
 		p.add(m3);
@@ -47,8 +45,6 @@ public class Playlist {
 		p.add(m7);
 		p.add(m8);
 		p.add(m9);
-		p.add(m10);
-		p.add(m11);
-
+		System.out.println(p.qtdMusica);
 	}
 }
