@@ -5,47 +5,30 @@ import java.util.List;
 
 public class Spotify {
 
-	private List<Musica> musicas;
+	private Musica[] musicas;
+	private int qtdMusica;
 
-	public Spotify(List<Musica> musicas) {
-		this.musicas = new ArrayList<>();
-	}
-
-	
 	public Spotify() {
+		musicas = new Musica[10];
+		qtdMusica = 0;
 	}
 
-
-	public List<Musica> getMusicas() {
-		return musicas;
-	}
-
-	public void setMusicas(List<Musica> musicas) {
-		this.musicas = musicas;
-	}
-
-	public void adicionarMusica(String nome, String artista, String letra, Enum genero, int anoLancamento, double duracao,
-			int vezesReproduzido) {
-//		TODO - Implementar
-	}
-
-	public int quantidadeMusica() {
-		int mus = 0;
-		for (int i = 0; i < musicas.size(); i++) {
-			mus = i;
+	public void add(Musica m) {
+		// se a quantidade de musicas for igual a quantidade de musicas
+		if (qtdMusica == musicas.length) {
+			// entao significa que ela ja possui 10 musicas
+			System.out.println("Playlist cheia");
 		}
-		return mus;
+		// se nao, adicione mais uma ai por favor
+		musicas[qtdMusica] = m;
+		qtdMusica++;
 	}
 
 	public void removerMusicaNome() {
 		// TODO - implementar
 	}
-	
-	public static void main(String[] args) {
-		
-		Spotify s = new Spotify();
-		Musica musica = new Musica("Bolado", "Fulano","Muito boa",null, 2020, 45.0, 1);
-		System.out.println(s.quantidadeMusica());
-	}
 
+	public static void main(String[] args) {
+
+	}
 }
