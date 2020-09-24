@@ -11,6 +11,11 @@ public class Spotify {
 		this.musicas = new ArrayList<>();
 	}
 
+	
+	public Spotify() {
+	}
+
+
 	public List<Musica> getMusicas() {
 		return musicas;
 	}
@@ -19,20 +24,28 @@ public class Spotify {
 		this.musicas = musicas;
 	}
 
-	public void adicionarMusica(Musica musica) {
-		musicas.add(musica);
+	public void adicionarMusica(String nome, String artista, String letra, Enum genero, int anoLancamento, double duracao,
+			int vezesReproduzido) {
+//		TODO - Implementar
 	}
 
-	public int quantidadeMusica(int quantidade) {
+	public int quantidadeMusica() {
 		int mus = 0;
 		for (int i = 0; i < musicas.size(); i++) {
 			mus = i;
 		}
 		return mus;
 	}
-	
+
 	public void removerMusicaNome() {
-	//	TODO - implementar	
+		// TODO - implementar
+	}
+	
+	public static void main(String[] args) {
+		
+		Spotify s = new Spotify();
+		Musica musica = new Musica("Bolado", "Fulano","Muito boa",null, 2020, 45.0, 1);
+		System.out.println(s.quantidadeMusica());
 	}
 
 }
