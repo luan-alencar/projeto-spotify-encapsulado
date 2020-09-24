@@ -18,15 +18,16 @@ public class Playlist {
 		qtdMusica++;
 	}
 
-	public void removerMusicaNome(String nome) {
+	public void removerMusicaNome(Musica musica) {
 		// TODO - implementar
 		Musica msc = null;
 		for (Musica m : musicas) {
-			if (m.getNome().equals(nome)) {
+			if (m.getNome().equals(musica)) {
 				msc = m;
 			}
 		}
 		musicas.remove(msc);
+		qtdMusica--;
 	}
 
 	public static void main(String[] args) {
@@ -35,6 +36,12 @@ public class Playlist {
 		Musica m2 = new Musica("asdf", "sdfa", "scvv", Enum.ROMANCE, 2020, 45.04, 2);
 		p.add(m);
 		p.add(m2);
+		System.out.println(p.qtdMusica);
+		System.out.println("Excluir 1");
+		p.removerMusicaNome(m);
+		System.out.println(p.qtdMusica);
+		System.out.println("Excluir 2");
+		p.removerMusicaNome(m2);
 		System.out.println(p.qtdMusica);
 	}
 }
