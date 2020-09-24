@@ -3,12 +3,12 @@ package in.augustluan.entidades;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Spotify {
+public class Playlist {
 
 	private Musica[] musicas;
 	private int qtdMusica;
 
-	public Spotify() {
+	public Playlist() {
 		musicas = new Musica[10];
 		qtdMusica = 0;
 	}
@@ -29,6 +29,8 @@ public class Spotify {
 	}
 
 	public static void main(String[] args) {
-
+		Playlist p = new Playlist();
+		Musica m = new Musica("asdf", "sdfa", "scvv", null, 2020, 45.04, 2);
+		p.add(m);
 	}
 }
