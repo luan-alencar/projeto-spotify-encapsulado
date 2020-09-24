@@ -1,28 +1,37 @@
 package in.augustluan.entidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Playlist {
 
-	private Musica[] musicas;
+	private List<Musica> musicas;
 	private int qtdMusica; // vc pode descobrir quantas tem chamando qtdMusica na saida no metodo main
 
 	public Playlist() {
-		musicas = new Musica[10];
+		musicas = new ArrayList<Musica>();
 		qtdMusica = 0;
 	}
 
 	public void add(Musica m) {
 		// se a quantidade de musicas for igual a quantidade de musicas
-		if (qtdMusica == musicas.length) {
+		if (qtdMusica == musicas.size()) {
 			// entao significa que ela ja possui 10 musicas
 			System.out.println("Playlist cheia");
 		}
 		// se nao, adicione mais uma ai por favor
-		musicas[qtdMusica] = m;
-		qtdMusica++;
+		musicas.add(m);
 	}
 
-	public void removerMusicaNome() {
+	public void removerMusicaNome(String nome) {
 		// TODO - implementar
+		Musica msc = null;
+		for (Musica m : musicas) {
+			if (m.getNome().equals(nome)) {
+				msc = m;
+			}
+		}
+		musicas.remove(msc);
 	}
 
 	public static void main(String[] args) {
