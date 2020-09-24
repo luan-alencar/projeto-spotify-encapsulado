@@ -30,5 +30,9 @@ public class Spotify {
 		}
 		return mus;
 	}
+	
+	public void removerMusicaNome() {
+	//	TODO - implementar	
+	}
 
 }
